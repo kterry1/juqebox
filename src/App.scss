@@ -1,0 +1,163 @@
+$primary-color: #383c4d;
+$secondary-color: #e67555;
+$tertiary-color: #efe0ac;
+$quaternary-color: #c7ac9f;
+$quinary-color: #8e7f88;
+$primary-font-family: "Red Rose", cursive; // 300-700 weight
+$primary-font-size: 36px;
+$secondary-font-size: 22px;
+$tertiary-font-size: 18px;
+$quaternary-font-size: 14px;
+$margin-xtra-light: 0.5rem;
+$margin-light: 0.75rem;
+$margin-medium: 1rem;
+$margin-heavy: 1.5rem;
+$padding-xtra-light: 0.25rem;
+$padding-light: 0.5rem;
+$padding-medium: 0.75rem;
+$padding-heavy: 1rem;
+$padding-xtra-heavy: 2rem;
+// $primary-button-color-hover: #fb6132b4;
+$white: #fff;
+
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: #{$padding-xtra-heavy};
+  height: 100vh;
+  width: 100vw;
+  min-width: 524px;
+  min-height: 700px;
+  font-family: #{$primary-font-family};
+  body {
+    background: linear-gradient(
+      328.1deg,
+      rgba(56, 60, 77, 0) 46.31%,
+      #383c4d 46.59%
+    );
+    background-repeat: no-repeat;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .logo_container {
+    position: relative;
+    height: 50px;
+    width: 200px;
+
+    .juqebox {
+      font-size: #{$primary-font-size};
+    }
+
+    .headphones {
+      position: absolute;
+      top: -18px;
+      right: 72px;
+    }
+  }
+
+  .search_container {
+    position: relative;
+    width: 240px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    .search {
+      height: 100%;
+      width: 100%;
+      border: none;
+      outline: none;
+      color: #{$white};
+      padding: 0 #{$padding-heavy};
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 30px;
+      background-color: #{$secondary-color};
+    }
+    .search_logo {
+      position: absolute;
+      left: 1rem;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.social_icons_container {
+  display: flex;
+  flex-direction: column;
+  margin: #{$padding-medium};
+  position: absolute;
+  right: #{$padding-medium};
+  bottom: #{$padding-medium};
+
+  img {
+    height: 25px;
+    width: 25px;
+    margin: #{$margin-xtra-light} #{$margin-medium};
+    cursor: pointer;
+  }
+}
+
+.left_panel {
+  display: flex;
+  width: 200px;
+  height: 85vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .song_list_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 4rem;
+    .title {
+      color: #{$quaternary-color};
+      font-size: #{$secondary-font-size};
+
+      img {
+        position: relative;
+        top: 5px;
+        left: 20px;
+      }
+    }
+    .songs {
+      color: #{$quinary-color};
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-inline-start: 0px;
+      font-size: #{$quaternary-font-size};
+      letter-spacing: 0.4px;
+
+      li {
+        padding: #{$padding-light} 0 #{$padding-light} #{$padding-light};
+        list-style: none;
+        position: relative;
+
+        span {
+          padding-right: #{$padding-heavy};
+        }
+      }
+    }
+  }
+
+  button {
+    background: #212733;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    color: #{$tertiary-color};
+    cursor: pointer;
+    margin: 0 #{$margin-medium};
+    justify-self: flex-end;
+    letter-spacing: 0.4px;
+  }
+}
